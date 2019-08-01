@@ -1,0 +1,23 @@
+{
+  "name": "flowr-runner",
+  "version": "1.0.0",
+  "description": "Serverless Runner for Flowr",
+  "main": "src/handler.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linjunpop/flowr-runner.git"
+  },
+  "author": "Jun Lin",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/linjunpop/flowr-runner/issues"
+  },
+  "homepage": "https://github.com/linjunpop/flowr-runner",
+  "private": true,
+  "devDependencies": {
+    "mocha": "^6.2.0"
+  }
+}
