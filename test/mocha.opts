@@ -1,1 +1,2 @@
---recursive "./test/**/*_test.js"
+--require ts-node/register --watch-extensions ts,tsx
+--recursive "./test/**/*_test.ts"

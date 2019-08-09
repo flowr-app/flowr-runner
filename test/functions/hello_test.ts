@@ -1,5 +1,5 @@
-let assert = require("assert");
-let hello = require("../../src/functions/hello");
+import * as assert from "assert";
+import { hello } from "../../src/functions/hello";
 
 describe("hello", function() {
   describe("#hello", function() {

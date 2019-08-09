@@ -4,7 +4,7 @@
   "description": "Serverless Runner for Flowr",
   "main": "src/handler.js",
   "scripts": {
-    "test": "mocha"
+    "test": "./node_modules/.bin/mocha"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,11 @@
   "homepage": "https://github.com/linjunpop/flowr-runner",
   "private": true,
   "devDependencies": {
-    "mocha": "^6.2.0"
-  }
+    "@types/mocha": "^5.2.7",
+    "mocha": "^6.2.0",
+    "serverless-plugin-typescript": "^1.1.9",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {}
 }

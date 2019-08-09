@@ -119,6 +119,7 @@ functions:
 
 plugins:
   - serverless-offline #serverless-offline needs to be last in the list
+  - serverless-plugin-typescript
 
 custom:
   defaultStage: dev
