@@ -1,8 +1,6 @@
-"use strict";
+import { hello } from "../functions/hello";
 
-let { hello } = require("./functions");
-
-module.exports.hello = async (event, context, callback) => {
+let handleHello = async (event: any, context: any, callback: any) => {
   return {
     statusCode: 200,
     body: JSON.stringify(
@@ -15,3 +13,5 @@ module.exports.hello = async (event, context, callback) => {
     )
   };
 };
+
+export { handleHello };

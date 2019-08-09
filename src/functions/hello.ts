@@ -1,4 +1,4 @@
-let hello = name => {
+let hello = (name: string) => {
   return `Hello ${name}`;
 };
 

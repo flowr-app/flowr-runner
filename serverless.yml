@@ -24,6 +24,7 @@ provider:
   runtime: nodejs10.x
   stage: ${opt:stage, self:custom.defaultStage}
   profile: ${self:custom.profiles.${self:provider.stage}}
+  role: ${env:ROLE} 
 
 # you can overwrite defaults here
 #  stage: dev
@@ -64,7 +65,9 @@ package:
 
 functions:
   hello:
-    handler: src/handler.hello
+    handler: src/handler.handleHello
+  echo:
+    handler: src/handler.handleEcho
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
@@ -120,6 +123,7 @@ functions:
 plugins:
   - serverless-offline #serverless-offline needs to be last in the list
   - serverless-plugin-typescript
+  - serverless-dotenv-plugin
 
 custom:
   defaultStage: dev
