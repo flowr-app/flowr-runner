@@ -22,6 +22,8 @@ service: flowr-runner
 provider:
   name: aws
   runtime: nodejs10.x
+  stage: ${opt:stage, self:custom.defaultStage}
+  profile: ${self:custom.profiles.${self:provider.stage}}
 
 # you can overwrite defaults here
 #  stage: dev
@@ -55,6 +57,10 @@ provider:
 #  exclude:
 #    - exclude-me.js
 #    - exclude-me-dir/**
+package:
+  exclude:
+    - '.vscode/**'
+    - 'test/**'
 
 functions:
   hello:
@@ -113,3 +119,9 @@ functions:
 
 plugins:
   - serverless-offline #serverless-offline needs to be last in the list
+
+custom:
+  defaultStage: dev
+  profiles:
+    dev: devProfile
+    prod: prodProfile
