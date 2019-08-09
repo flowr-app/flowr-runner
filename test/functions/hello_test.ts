@@ -1,5 +1,5 @@
 import * as assert from "assert";
-import { hello } from "../../src/functions/hello";
+import { hello } from "../../src/hello/hello_service";
 
 describe("#hello", function() {
   it("should say hello", function() {
